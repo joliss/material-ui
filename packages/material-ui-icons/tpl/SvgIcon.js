@@ -2,7 +2,7 @@ import React from 'react';
 import pure from 'recompose/pure';
 import SvgIcon from '{{{ muiRequireStmt }}}';
 
-const SvgIconCustom = global.__MUI_SvgIcon__ || SvgIcon;
+const SvgIconCustom = typeof global !== 'undefined' && global.__MUI_SvgIcon__ || SvgIcon;
 
 let {{className}} = props =>
   <SvgIconCustom {...props}>
